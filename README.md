@@ -46,3 +46,28 @@ With a config like this:
 ```
 
 You will also need another fluentd daemonset, which forwards everything to this service.
+
+
+## Result
+
+```JSON
+{
+    "log": "severity=INFO pid=1 -- Greeting matey\n",
+    "stream": "stdout",
+    "docker": {
+        "container_id": "6b4d83d36d71fe34ca24194f4f88532285bf97793a66ae7a932ab5c92d83af76"
+    },
+    "kubernetes": {
+        "namespace_name": "default",
+        "pod_name": "whale-carcass-production-1513909789-lfpm7",
+        "pod_id": "b4cffc59-fea0-11e6-877f-022db3968493",
+        "labels": {
+            "app": "whale-carcass-app",
+            "pod-template-hash": "1513909789",
+            "stage": "production"
+        },
+        "host": "ip-172-20-88-33.ap-southeast-2.compute.internal",
+        "container_name": "whale-carcass-app"
+    }
+}
+```
