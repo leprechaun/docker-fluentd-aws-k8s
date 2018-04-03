@@ -1,4 +1,4 @@
-FROM fluent/fluentd
+FROM fluent/fluentd:v1.1
 USER root
 
 RUN apk update && apk add ruby-dev && apk add build-base
